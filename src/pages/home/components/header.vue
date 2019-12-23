@@ -18,10 +18,10 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
-  // props: {
-  //   city: String
-  // }
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
@@ -38,13 +38,9 @@ export default {
       width 0.64rem
       float left
       .back-icon
-        width 100%
-        height 100%
-        margin-top 0.22rem
         text-align center
         font-size 0.4rem
-        justify-content center
-        align-items center
+        margin-top 0.25rem
     .header-input
       flex 1
       height 0.64rem
@@ -55,6 +51,7 @@ export default {
       color #ccc
       border-radius 0.1rem
     .header-right
+      min-width 1.04rem
       width 1.24rem
       float right
       text-align center

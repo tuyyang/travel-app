@@ -58,6 +58,8 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
+  @import '~styles/varibles.styl'
+
   .border-topbottom
     &:before
       border-color #ccc
@@ -74,7 +76,7 @@ export default {
     right 0
     bottom 0
     .title
-      line-height 0.44rem
+      line-height 0.54rem
       font-size 0.26rem
       padding 0.2rem
       background #eee
@@ -90,6 +92,7 @@ export default {
           padding 0.1rem 0
           text-align center
           border 0.02rem solid #ccc
+          border-radius 0.06rem
     .item-list
       .item
         line-height 0.76rem

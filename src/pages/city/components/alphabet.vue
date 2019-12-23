@@ -34,7 +34,7 @@ export default {
     return {
       touchStatus: false,
       startY: 0,
-      timer: none
+      timer: null
     }
   },
   updated() {
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     handleLetterClick(e) {
-      this.$emit('change', e.target.innerHtml)
+      this.$emit('change', e.target.innerText)
     },
     handleTouchStart() {
       this.touchStatus=true
@@ -54,7 +54,7 @@ export default {
         }
         this.timer=setTimeout(() => {
           const touchY=e.touches[0].clientY-79
-          const index=Math.floor((touchY-startY)/20)
+          const index=Math.floor((touchY-this.startY)/20)
           if(index>=0&&index<this.letters.length) {
             this.$emit('change', this.letters[index])
           }
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang='stylus' scoped>
-  @import '~styles/baribles.styl'
+  @import '~styles/varibles.styl'
 
   .list
     display flex
@@ -83,5 +83,4 @@ export default {
     .item
       line-height 0.4rem
       text-align center
-      background $bgColor
 </style>
